@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain>www.altstu.ru</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <!-- GlobalSign Root R46 is absent from older Android system stores. -->
+            <certificates src="@raw/globalsign_root_r46" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

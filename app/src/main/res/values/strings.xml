@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Schedule</string>
+    <string name="yulia">Юля</string>
+    <string name="nastya">Настя</string>
+    <string name="refresh_schedule">Обновить расписание</string>
+    <string name="previous_week">Предыдущая неделя</string>
+    <string name="next_week">Следующая неделя</string>
+    <string name="schedule_week">%1$s – %2$s</string>
+    <string name="schedule_loading">Загружаем расписание…</string>
+    <string name="schedule_no_lessons">За эту неделю занятий не найдено</string>
+    <string name="schedule_empty_source">%1$s · занятий за неделю не найдено</string>
+    <string name="schedule_error_source">%1$s · не удалось загрузить расписание</string>
+    <string name="schedule_lesson_details">%1$s · %2$s\n%3$s · %4$s</string>
+    <string name="schedule_lesson_type">Тип занятия · %1$s</string>
+    <string name="schedule_close">Закрыть</string>
+    <string-array name="schedule_days">
+        <item>Пн</item>
+        <item>Вт</item>
+        <item>Ср</item>
+        <item>Чт</item>
+        <item>Пт</item>
+        <item>Сб</item>
+        <item>Вс</item>
+    </string-array>
+</resources>

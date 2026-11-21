@@ -1,0 +1,129 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/schedule_background"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="9dp"
+        android:paddingTop="52dp"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/schedule_card"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:outlineSpotShadowColor="@color/schedule_axis"
+            android:paddingHorizontal="12dp">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/ScheduleLegend"
+                    android:drawableStart="@drawable/schedule_dot_yulia"
+                    android:text="@string/yulia" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:background="@color/schedule_grid" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/ScheduleLegend"
+                    android:drawableStart="@drawable/schedule_dot_nastya"
+                    android:text="@string/nastya" />
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/refresh"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/schedule_refresh"
+                android:contentDescription="@string/refresh_schedule"
+                android:src="@drawable/ic_schedule_refresh" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/schedule_card"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:outlineSpotShadowColor="@color/schedule_axis"
+            android:paddingStart="16dp"
+            android:paddingEnd="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_schedule_calendar" />
+
+            <TextView
+                android:id="@+id/week"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:accessibilityLiveRegion="polite"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/schedule_text"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/previous_week"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/previous_week"
+                android:src="@drawable/ic_schedule_previous" />
+
+            <ImageButton
+                android:id="@+id/next_week"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/next_week"
+                android:src="@drawable/ic_schedule_next" />
+        </LinearLayout>
+
+        <com.example.schedule.ui.WeekTimelineView
+            android:id="@+id/timeline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/schedule_card"
+            android:elevation="4dp"
+            android:outlineSpotShadowColor="@color/schedule_axis" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:accessibilityLiveRegion="polite"
+            android:background="@drawable/schedule_card"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/schedule_ink"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>
